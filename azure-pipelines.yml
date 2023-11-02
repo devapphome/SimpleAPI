@@ -35,5 +35,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: 'Test\SimpleAPI.Test\SimpleAPI.Test.csproj'
+    projects: '$(System.DefaultWorkingDirectory)/**/*.Test/*.csproj'
     arguments: '--configuration/$(buildConfiguration)'
